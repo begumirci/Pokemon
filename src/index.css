@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grass {
+  background-color: #9bcc50;
+  border-color: #9bcc50;
+  color: #212121;
+  z-index: 1;
+}
+
+.fire {
+  background-color: #fd7d24;
+  border-color: #fd7d24;
+  color: #fff;
+  z-index: 1;
+}
+
+.poison {
+  background-color: #b97fc9;
+  border-color: #b97fc9;
+  color: #fff;
+  z-index: 1;
+}
+
+.water {
+  background-color: #4592c4;
+  border-color: #4592c4;
+  color: #fff;
+  z-index: 1;
+}
+
+.normal {
+  background-color: #a4acaf;
+  border-color: #a4acaf;
+  color: #212121;
+  z-index: 1;
+}
+
+.bug {
+  background-color: #729f3f;
+  border-color: #729f3f;
+  color: #fff;
+  z-index: 1;
+}
+.electric {
+  background-color: #eed535;
+  color: #212121;
+  border-color: #eed535;
+  z-index: 1;
+}
+.flying {
+  position: relative;
+  background: linear-gradient(to top, #bdb9b8 50%, #3dc7ef 50%);
+  color: #212121;
+  border-color: #bdb9b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.ground {
+  position: relative;
+  background: linear-gradient(to top, #ab9842 50%, #f7de3f 50%);
+  color: #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #ab9842;
+  z-index: 1;
+}
+.fairy {
+  background-color: #fdb9e9;
+  color: #212121;
+  border-color: #fdb9e9;
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Opacity değeri burada belirlenir */
+  /* İçeriğin üzerine gelmesini sağlar */
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Modal İçeriği */
+.modal-content {
+  margin: 15% auto;
+  border: 1px solid #888;
+  width: 90%;
+  border-radius: 8px;
+  border-color: transparent;
+  z-index: 999999999;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Yavaş büyüme ve dönme animasyonu */
+.animate-slow {
+  animation: spin 1s linear infinite;
+}
