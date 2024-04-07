@@ -37,9 +37,8 @@ function App() {
           </div>
         </>
       ) : (
-        <div className='px-32 pb-10 bg-customBlue h-full '>
+        <div className='px-32 pt-12 pb-80 bg-customBlue h-full '>
           <Header />
-
           <PokemonItems />
         </div>
       )}

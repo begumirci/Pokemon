@@ -21,6 +21,7 @@ export default function PokemonItems() {
       for (let i = 1; i < 50; i++) {
         const pokemon = await getPokemon(i);
         fetchedPokemons.push(pokemon);
+        newList.push(pokemon);
       }
       setPokemons(fetchedPokemons);
     }
@@ -38,7 +39,7 @@ export default function PokemonItems() {
     <>
       <div>
         {newList.length > 0 ? (
-          <div className='grid grid-cols-1 gap-3 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4'>
+          <div className='grid grid-cols-1 gap-3 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 '>
             {newList.map((pokemon) => (
               <PokemonItem
                 key={pokemon.id}
@@ -50,8 +51,8 @@ export default function PokemonItems() {
           </div>
         ) : (
           <>
-            <div className='text-center uppercase text-amber-300 font-bold text-xl pt-24 h-screen'>
-              "{search}" ile başlayan bir pokemon bulunamadı...
+            <div className='text-center uppercase text-amber-300 font-bold text-xl pt-24 h-screen '>
+              -{search}- ile başlayan bir pokemon bulunamadı...
             </div>
           </>
         )}
