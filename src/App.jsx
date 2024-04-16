@@ -2,6 +2,7 @@ import { createContext, useEffect } from 'react';
 import Header from './assets/components/Header';
 import PokemonItems from './assets/components/PokemonItems';
 import { useState } from 'react';
+import pokeBall from '../public/pokeball.png';
 
 export const myData = createContext();
 
@@ -29,11 +30,7 @@ function App() {
       {isLoading ? (
         <>
           <div className=' bg-gradient-to-r from-slate-300 to-black h-screen flex items-center justify-center'>
-            <img
-              className='w-52 animate-slow'
-              src='../public/pokeball.png'
-              alt=''
-            />
+            <img className='w-52 animate-slow' src={pokeBall} alt='' />
           </div>
         </>
       ) : (

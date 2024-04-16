@@ -1,12 +1,13 @@
 import { useContext } from 'react';
 import { myData } from '../../App';
+import logo from '../../../public/logo.png';
 
 export default function Header() {
   const { search, setSearch } = useContext(myData);
   return (
     <div className='flex flex-col  items-center justify-center py-10 gap-5 mb-7 sm:py-16 '>
       <div className='text-pink-400 text-4xl font-bold text-center '>
-        <img className='w-64' src='../../../public/logo.png' alt='' />
+        <img className='w-64' src={logo} alt='' />
       </div>
       <input
         value={search}
